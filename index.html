@@ -3,10 +3,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link href="./style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <title>PCGEN</title>
+    <link href="./pcParts/CPU.png" rel="icon">
 </head>
 <body>
     <script src="./generator.js"></script>
-    
+    <script src="./extended.js"></script>
+
     <h1>PC GEN</h1>
 
     <div style="display: flex; justify-content: center;">
@@ -24,4 +27,6 @@
             -${event.clientX / window.screen.width * 10}px -${event.clientY / window.screen.height * 10}px  black`;
         });   
     </script>
+    <button id="loadData" onclick="loadLargeDataBase()">loadLargeDataBase</button>
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#000', 'T6T61CQGOZ');kofiwidget2.draw();</script> 
 </body>

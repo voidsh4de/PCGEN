@@ -18,7 +18,7 @@ body {
     background-size: 10vw;
 }
 
-button {
+#generate {
     position: absolute;
     width: 30%;
     font-size: 6vw;
@@ -28,6 +28,17 @@ button {
     border-radius: 20%;
     text-align: center;
     margin-top: 6vw;
+}
+
+#loadData {
+    position: fixed;
+    top:0;
+    font-size: 2vw;
+    font-family: "Chewy";
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 5%;
+    text-align: center;
 }
 
 #result {

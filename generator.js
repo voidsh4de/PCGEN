@@ -1,9 +1,9 @@
 
 const psuList = [ 150, 250, 350, 450, 550, 650, 750, 850, 1000, 1200];
 
-const gpuList = ["none/intergrated", "1080 ti", "rx 580", "5090 ti", "4070 ti super", "rx 9070 xt", "A750", "B580", "craigs list mystery gpu"];
+let gpuList = ["none/intergrated", "1080 ti", "rx 580", "5090 ti", "4070 ti super", "rx 9070 xt", "A750", "B580", "craigs list mystery gpu"];
 
-const cpuList = ["Celeron D", "pentium 4", "ryzen 5 7600", "core Ultra 5 125H", "ryzen 7 9800x3d", "Core i9-14900KS", "Xeon E3-1270 v6"];
+let cpuList = ["Celeron D", "pentium 4", "ryzen 5 7600", "core Ultra 5 125H", "ryzen 7 9800x3d", "Core i9-14900KS", "Xeon E3-1270 v6"];
 
 const ramList = [4, 8, 16, 32, 64, 128, 258, 512, 1024, 2048];
 
@@ -44,4 +44,10 @@ function showResult(result) {
 function generateButton() {
     const computerGen = formatPc();
     showResult(computerGen)
+}
+
+function loadLargeDataBase() {
+    gpuList = gpuListExtended;
+    cpuList = cpuListExtended;
+    document.getElementById("loadData").style.display = "none";
 }

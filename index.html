@@ -18,15 +18,26 @@
     </div>
 
     <script>
-        document.addEventListener('mousemove', (event) => {
-            document.querySelector("h1").style.textShadow = `
-            0px 2px black,
-            0px -2px black,
-            2px 0px black,
-            -2px 0px black,
-            -${event.clientX / window.screen.width * 10}px -${event.clientY / window.screen.height * 10}px  black`;
-        });   
+        document.addEventListener("DOMContentLoaded", () => {
+                const heading = document.querySelector("h1");
+                const location = heading.getBoundingClientRect();
+
+                const centerX = location.left + (location.width / 2);
+                const centerY = location.top + (location.height / 2);
+                
+            document.addEventListener('mousemove', (event) => {
+                document.querySelector("h1").style.textShadow = `
+                0px 2px black,
+                0px -2px black,
+                2px 0px black,
+                -2px 0px black,
+                ${-((event.clientX - centerX) / 100)}px ${-((event.clientY - centerY) / 100)}px  black`;
+            });  
+        }); 
     </script>
+
     <button id="loadData" onclick="loadLargeDataBase()">loadLargeDataBase</button>
-    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#000', 'T6T61CQGOZ');kofiwidget2.draw();</script> 
+    
+    <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+    <script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#000', 'T6T61CQGOZ');kofiwidget2.draw();</script> 
 </body>
